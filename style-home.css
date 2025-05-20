@@ -1,0 +1,251 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "barlow condensed";
+}
+.container{
+    background-image: url(./assets/home/background-home-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 1.5em;
+}
+header{
+    position: relative;
+}
+.nav-close{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-open{
+    position: fixed;
+    display: block;
+    top: 0;
+    right: 0;
+    width: 65%;
+    height: 100%;
+    padding: 2.5em 2em;
+    backdrop-filter: blur(40px);
+    justify-items: end;
+    transform: translateX(800px);
+    transition: all 1s ease-out;
+}
+.icon-hamburger, .icon-close{
+    cursor: pointer;
+}
+.line{
+    display: none;
+}
+.nav-open a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: all 250ms ease-in-out;
+}
+ul{
+    justify-self: start;
+    list-style: none;
+    margin: 4em auto;
+    margin-right: -1.95em;
+}
+li{
+    display: block;
+    margin: 1.5em auto;
+    transition: all 1s ease-in-out;
+}
+a:hover{
+    border-right: 5px solid rgba(255, 255, 255, 0.5);
+}
+.active{
+    border-right: 5px solid white;
+}
+a span{
+    font-weight: 400;
+    margin-right: 0.5em;
+    color: white;
+    font-size: 1em;
+}
+.home{
+    color: rgba(208, 214, 249, 1);
+    text-align: center;
+    justify-items: center;
+}
+.home h1{
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: 200;
+    letter-spacing: 0.1em;
+    margin: 3em auto;
+}
+.home h2{
+    font-family: Bellefair, serif;
+    text-transform: uppercase;
+    font-size: 5em;
+    font-weight: 200;
+    color: white;
+}
+.home p{
+    font-family: barlow;
+    font-size: 0.75em;
+    font-weight: 200;
+    letter-spacing: 0.1em;
+    line-height: 1.75em;
+    margin: 2em auto;
+}
+.explore-outer{
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 50%;
+    width: fit-content;
+    transition: all 0.5s linear;
+}
+.explore-outer:hover{
+    background-color: rgba(255, 255, 255, 0.09);
+    cursor: pointer;
+}
+.explore{
+    display: inline-block;
+    background-color: white;
+    color: black;
+    padding: 4em 2.25em;
+    border-radius: 50%;
+    text-transform: uppercase;
+    margin: 6em;
+}
+.explore h3{
+    font-family: Bellefair;
+    font-size: 1.1em;
+    font-weight: 400;
+}
+
+@media screen and (min-width:750px) {
+    .container{
+        background-image: url(./assets/home/background-home-tablet.jpg);
+        padding: 2.5em;
+    }
+    .logo{
+        width: 100%;
+    }
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        margin-top: -2.5em;
+        margin-right: -2.5em;
+    }
+    .nav-open{
+        position: relative;
+        display: flex;
+        top: 0;
+        right: 0;
+        width: fit-content;
+        padding: 2.5em 2em;        
+        transform: translateX(0);
+        transition: all 1s ease-out;
+        padding: 0;
+    }
+    .icon-hamburger, .icon-close{
+        display: none;
+    }
+    ul{
+        display: flex;
+        margin: 0;
+        gap: 2em;
+        padding-left: 6em;
+        padding-right: 2em;
+        background-color: rgba(255, 255, 255, 0.06);
+    }
+    li{
+        margin: 0;
+    }
+    .nav-open a{
+        font-size: 1.15em;
+        padding: 2em 0;
+    }
+    a:hover{
+        border-right: none;
+        border-bottom: 5px solid rgba(255, 255, 255, 0.5);
+    }
+    .active{
+        border-right: none;
+        border-bottom: 5px solid white;
+    }
+    .home h1{
+        font-size: 1.75em;
+        letter-spacing: 0.1em;
+        margin: 0;
+        margin-top: 4em;
+    }
+    .home h2{
+        font-size: 8.5em;
+        margin: 0.2em auto;
+    }
+    .home p{
+        width: 75%;
+        font-size: 1em;
+        margin: 2em auto;
+        margin-bottom: 0;
+    }
+    .explore-outer{
+        margin: 0 auto;
+        margin-bottom: 6em; 
+    }
+    .explore{
+        padding: 6em 3em;
+        margin: 4em;
+    }
+    .explore h3{
+        font-size: 1.75em;
+}
+}
+@media screen and (min-width:1400px) {
+    .container{
+        background-image: url(./assets/home/background-home-desktop.jpg);
+        background-size: cover;
+    }
+    header{
+        margin: 0 -2.5em 0 1em;
+        position: relative;
+    }
+    .line{
+        display: block;
+        position: absolute;
+        width: 92%;
+        height: 2px;
+        right: 0;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+    ul{
+        padding-left: 10em;
+        padding-right: 4em;
+        background-color: rgba(255, 255, 255, 0.08);
+    }
+    .nav-open a{
+        padding: 1.75em 0;
+    }
+    .home{
+        display: flex;
+        text-align: left;
+        margin: 22em 6em 4em 6em;
+        align-items: center;
+    }
+    .home h1{
+        margin: 0;
+    }
+    .home p{
+        width: 75%;
+        margin: 0;
+    }
+    .explore-outer{
+        margin-bottom: 0;
+    }
+    .explore{
+        padding: 7em 4.2em;
+        margin: 5em;
+    }
+}

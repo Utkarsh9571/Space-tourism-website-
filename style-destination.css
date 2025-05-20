@@ -1,0 +1,191 @@
+@import url(style-home.css);
+
+.container{
+    background-image: url(./assets/destination/background-destination-mobile.jpg);
+    background-size: cover;
+    color: rgba(208, 214, 249, 1);
+    font-family: 'barlow condensed';
+}
+.pick-destination{
+    margin: 2em auto;
+    text-align: center;
+}
+.pick-destination h1{
+    text-transform: uppercase;
+    color: white;
+    font-size: 1.15em;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+}
+span{
+    font-weight: 500;
+    margin-right: 1em;
+    opacity: 0.4;
+}
+.pick-destination img{
+    width: 45%;
+    margin-top: 4em;
+}
+
+.destination-info{
+    text-align: center;
+}
+.destination-info a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: all 250ms ease-in-out;
+}
+.destination-info a:hover{
+    border-right: none;
+}
+.destination-info ul{
+    display: flex;
+    justify-self: center;
+    margin: 0;
+    gap: 1.25em;
+}
+.destination-info li{
+    padding-bottom: 0.75em;
+    margin-bottom: 1em;
+    transition: all 150ms ease-in-out;
+}
+.destination-info li:hover{
+    border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+}
+.desti-active{
+    border-bottom: 3px solid white;
+}
+
+.destination-info h2{
+    text-transform: uppercase;
+    font-weight: 200;
+    font-family: Bellefair;
+    color: white;
+    font-size: 3.5em;
+    margin: 0.25em auto;
+}
+.destination-info .description{
+    font-family: barlow;
+    font-weight: 200;
+    line-height: 1.75em;
+    font-size: 0.95em;
+    padding-bottom: 1.5em;
+    border-bottom: 1px solid grey;
+}
+.distance-and-time{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 1.5em;
+}
+.distance h3, .time h3{
+    text-transform: uppercase;
+    font-weight: 200;
+    letter-spacing: 0.1em;
+}
+.distance p, .time p{
+    font-family: Bellefair;
+    font-size: 1.65em;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    margin: 0.5em;
+}
+@media screen and (min-width:750px) {
+    .container{
+    background-image: url(./assets/destination/background-destination-tablet.jpg);
+    }
+    .pick-destination{
+        text-align: center;
+    }
+    .pick-destination h1{
+        font-size: 1.5em;
+        text-align: left ;
+    }
+    .pick-destination img{
+        width: 45%;
+        margin: 3em auto;
+        margin-top: 4em;
+    }
+    .destination-info ul{
+        gap: 1.75em;
+        padding: 0;
+        background-color: rgba(255, 255, 255, 0);
+    }
+    .destination-info h2{
+        font-size: 5em;
+    }
+    .destination-info .description{
+        width: 70%;
+        margin: auto;
+    }
+    .distance-and-time{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    }
+    .distance h3, .time h3{
+        font-size: 0.85em;
+    }
+    .distance p, .time p{
+        font-size: 1.5em;
+    }
+}
+@media screen and (min-width:1400px) {
+    .container{
+    background-image: url(./assets/destination/background-destination-desktop.jpg);
+    }
+    .destination{
+        margin: 2em 8em;
+        display: flex;
+        gap: 6em;
+    }
+    .pick-destination{
+        text-align: center;
+        margin: 0;
+        width: 50%;
+    }
+    .pick-destination h1{
+        font-size: 1.75em;
+    }
+    .pick-destination img{
+        width: 100%;
+        margin: 10em 1em;
+    }
+    .destination-info{
+        display: block;
+        align-content: center;
+        text-align: left;
+        width: 50%;
+        padding: 3em;
+    }
+    .destination-info ul{
+        justify-self: start;
+    }
+    .destination-info .description{
+        font-size: 1.1em;
+        width: 100%;
+        margin: 0;
+        padding-bottom: 2em;
+    }
+    .distance-and-time{
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        margin-top: 2em;
+        gap: 5em;
+    }
+    .distance h3, .time h3{
+        font-size: 0.85em;
+        margin-bottom: 0.75em;
+    }
+    .distance p, .time p{
+        font-size: 1.5em;
+        margin: 0;
+    }
+}
